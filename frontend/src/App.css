@@ -1,0 +1,415 @@
+/*  ===== MOBILE styles (reside at the top and are inherited by all devices) ===== */
+/*  ===== See tablet, desktop, and print @media queries at the bottom. */
+
+
+/*   ----- Imports  -----  */
+  /* Add fonts from the app's server 
+    @font-face {                
+      font-family: 'FontName';
+      src: url('FontName.woff2') format('woff2');
+    } 
+    ...or hosted services like Google Fonts 
+    @import url(//fonts.googleapis.com/css?family=Font+Name);
+  */
+  
+  /* @import 'node_modules/modern-normalize/modern-normalize.css'; */
+        /* npm install modern-normalize
+          Resets elements for browser consistency.  
+          https://www.npmjs.com/package/modern-normalize
+        */         
+  
+  /* Component-specific stylesheets, if any. 
+    @import "component1.css";   
+  */
+
+
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap');
+  @import "~react-image-gallery/styles/css/image-gallery.css";
+
+  /*   ----- Variables  -----  */
+  :root {
+      --med-blue: rgb(32, 82, 149);
+      --light-beige: rgb(197, 191, 185, 0.9);
+      --dark-blue: rgb(10, 38, 71);
+      --light-blue: rgb(44, 116, 179);
+      --transp-light-blue: rgb(44, 116, 179, 0.45);
+      --yellow: rgb(255, 201, 60);
+      --ruby-red: rgb(147, 31, 29);
+      --android-green: rgb(155, 197, 61);
+      --light-yellow: rgba(247, 231, 160, 0.692);
+      --transp-light-beige: rgb(197, 191, 185, 0.4);
+  
+      /* --custom-embellishment-name:; */
+  }
+    
+  /*  ----- Viewport ----- elements inherited by all remaining elements ----- */
+  body {       /* Can alternatively define in html {} or :root {} */
+      background-color:var(--light-beige);
+      background-image: url(images/singapore-old-hill-street-police-station.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: top left;
+      background-attachment: fixed;
+      background-blend-mode: lighten;
+      color:var(--dark-blue);
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      max-width: 95%;
+      padding: 20px 5%;
+   
+  
+  }
+  
+  /*  ----- Page layout blocks -----  */
+  header {
+      color: var(--yellow);
+      background-color: var(--transp-light-blue);
+      padding: 5px 5px;
+      margin-bottom: 20px;
+      text-align: center;
+      border: 2px solid var(--dark-blue);
+  }
+  main {
+      color: var(--dark-blue);
+      background-color: var(--transp-light-blue);
+      padding: 5px 15px;
+      margin-bottom: 10px;
+      border: 2px solid var(--dark-blue);
+  }
+  section {}
+  article {}
+      #topic1 {}
+      #topic2 {}
+  div {}
+  aside {}
+  footer {
+      background-color: var(--med-blue);
+      color: var(--light-beige);
+      padding: 20px 15px;
+      margin: 0;
+      border: 2px solid var(--dark-blue);
+  }
+  
+  /* ----- Anchors ----- Text links */
+  a {}
+  a:link {}
+  a:hover {}
+  a:active {}
+  a:visited {}
+  
+  /*  ----- Navigation ----- Override text links for navigation only.  */
+  nav {
+      text-align: center;
+      margin-bottom: 20px;
+      width: 100%;
+  }
+  nav a {
+      text-decoration: none;
+      margin: 0 1px;
+      padding: 10px;
+      background-color:var(--med-blue);
+      color: var(--yellow);
+      border: 2px solid var(--yellow);
+      border-radius: 15px;
+      width: 33.33%;
+  
+  }
+  nav a:hover {
+      background-color: var(--yellow);
+      color: var(--med-blue);
+  }
+  nav.page a{
+      color: var(--light-beige);
+      background-color: var(--dark-blue);
+      padding: 5px;
+      border: 2px solid var(--light-beige);
+      max-width: 10em;
+      margin: 0 auto;
+      flex: 1;
+      
+  }
+  
+  nav.page {
+      display: inline-flex;
+      flex-wrap: wrap;
+      margin: auto;
+  
+  }
+  
+  nav.page a:hover{
+      background-color: var(--light-beige);
+      color: var(--med-blue);
+  }
+  /*  -----  Typography  ----- */
+  p {}
+  br {}
+  ol, ul, dl {}
+  li {}
+  dt {}
+  dd {}
+  
+  h1, h2, h3, h4, h5, h6 {} 
+  h1 {
+      font-weight: 800;
+  }
+  h2 {
+      color: var(--yellow);
+      border-bottom: 2px solid var(--dark-blue);
+      padding: 5px;
+      font-weight: 600;
+  }
+  h3 {
+      color: var(--med-blue);
+  }
+  h4 {}
+  h5 {}
+  h6 {}
+  
+  abbr {}
+  acronym {}
+  address {}
+  blockquote {}
+  q {}
+  cite {}
+  em {}
+  hr {}
+  mark {}
+  s {}
+  span {}
+  strong {}
+  sub {}
+  sup {}
+  time {}
+  
+  /*  ----- Coding or instructional typography ----- */
+  pre {}
+  code {}
+  kbd {}
+  samp {}
+  var {}
+  del {} 
+  ins {}
+  
+  /*  ----- Table ----- */
+  table {
+      width: 90%;
+      margin: auto;
+      color: var(--dark-blue);
+      border-collapse: collapse;
+  }
+  caption {
+      font-weight: bold;
+      font-size: x-large;
+      margin-bottom: 1%;
+      border-bottom: solid 2px var(--med-blue);
+  }
+  thead {
+      text-align: center;
+      color: var(--med-blue);
+      font-size: larger;
+  }
+  tbody {
+      text-align: center;
+      font-size: larger;
+  }
+  tfoot {}
+  tr {
+      font-size: large;
+  }
+  tr:nth-child(even) {
+      background-color: var(--transp-light-beige);
+  }
+  th {
+      background-color: var(--light-beige);
+      padding: 1%;
+  }
+  td {
+      padding: 1%;
+  }
+  td:nth-child(1) {
+  }
+  colgroup {}
+  data {}
+  datalist {}
+  
+  
+  /*  ----- Form ----- */
+  input, button, textarea, select {
+      font-family: inherit;
+      font-size: 110%;
+      padding: 1%;
+  }
+  
+  form {}
+  fieldset {
+      border: 2px solid var(--med-blue);
+      margin-bottom: 10px;
+      padding: 1% 2%; 
+  }
+  legend {
+      color: var(--yellow);
+      font-size: 110%;
+  }
+  label {
+      display: block;
+      margin-top: 3%;
+  }
+  label.radio{
+      margin-top: 1%;
+  }
+  label.address{
+      margin-top: 1%;
+  }
+  button {
+      margin: 10px;
+      padding: 1%;
+  }
+  input {}
+  output {}
+  meter {}
+  progress {}
+  select {
+      font-size: 110%;
+      padding: 1%;
+  }
+  optgroup {}
+  option {
+      font-size: 110%;
+      padding: 1%;
+  }
+  textarea {}
+  *:required{
+      border: 3px solid var(--ruby-red);
+  }
+  .required:after{
+      content: " *";
+      color:var(--ruby-red);
+  }
+  label.checkbox{
+      display: inline;
+  }
+  input:invalid{
+      border: 3px solid var(--ruby-red)
+  }
+  input:valid{
+      border: 3px solid var(--android-green);
+  }
+  input::placeholder{
+      color: var(--light-blue);
+  }
+  input[type="checkbox"]:checked+label{
+      color: var(--med-blue);
+      font-style: italic;
+  }
+  input:disabled {
+      background: repeating-linear-gradient(142deg, #CCCCCC, #CCCCCC 4px, #999999 22px);
+  }
+  input:focus{
+      background-color: var(--light-yellow);
+  }
+  
+  /* ----- Media ----- */
+  figure {
+      margin: 4px;
+      color: var(--med-blue);
+  }
+  figcaption {
+      color: var(--med-blue);
+      text-align: center;
+      padding: 10px;
+      font-weight: 600;
+  }
+  figure img {
+      width: 100%;
+      color: var(--med-blue);
+  }
+  svg {}
+  picture {}
+  source {}
+  iframe {}
+  video {}
+  audio {}
+  embed {}
+  object {}
+  
+  /*  ----- Classes for alignment, positioning, widths, grids, embellishments, and animation -----  */
+  /* .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  } */
+  
+.biggerIcon {
+  font-size: 2em;
+  align-items: center;
+}
+
+  .floatright {}
+  .floatleft {}
+  .center-middle {}
+  
+  .ten {}
+  .twenty {}
+  .thirty {}
+  .forty {}
+  .fifty {}
+  .sixty {}
+  .seventy {}
+  .eighty {}
+  
+  .radius {}
+  .circle {}
+  .boxshadow {}
+  .tshadow {} 
+  .gradient {}
+  .shape {}
+  
+  @keyframes App-logo {}
+  
+  /*   ===== TABLET  media query overrides mobile styles ===== */
+  @media all and (min-width: 600px) {}
+  
+  /*   ===== DESKTOP  media query overrides mobile and tablet styles ===== */
+  @media all and (min-width: 1080px) {}
+  
+  /*   ===== PRINT  media query overrides previous styles =====  */
+  @media print {}
+  
+
+/* .App {
+  text-align: center;
+} */
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+/*
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+*/
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
